@@ -4,7 +4,7 @@ pipeline {
          stage ('First') {
             steps {
                 script{
-                    rvm --version
+                    sh "rvm --version"
                 } 
             }
         }
