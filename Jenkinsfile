@@ -4,7 +4,7 @@ pipeline {
          stage ('First') {
             steps {
                 script{
-                    sh "ruby --version"
+                    sh "bundle install"
                 } 
             }
         }
