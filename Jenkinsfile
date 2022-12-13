@@ -4,7 +4,7 @@ pipeline {
          stage ('First') {
             steps {
                 script{
-                    sh "bundle install"
+                    sh "sudo bundle install"
                 } 
             }
         }
