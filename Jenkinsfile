@@ -9,7 +9,7 @@ pipeline {
         stage ('Build') {
             steps {
                 script{
-                    sh "sudo bundle install" 
+                    sh "sudo bundle install"
                     env.CONTINUE = true
                 } 
             }
