@@ -10,6 +10,7 @@ pipeline {
             steps {
                 script{
                     sh "sudo bundle install"
+                    env.CONTINUE = true
                 } 
             }
         }
@@ -26,6 +27,7 @@ pipeline {
         stage ('Testing') {
             steps {
                 script{
+                    sh "gem install minitest"
                     sh "ruby tests.rb"
                 } 
             }
