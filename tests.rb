@@ -39,7 +39,7 @@ class TestConvert < Minitest::Test
     assert  @validate.ipv4_validation('127.0.0.1')
     assert  @validate.ipv4_validation('0.0.0.0')
     assert  @validate.ipv4_validation('192.168.0.1')
-    assert  @validate.ipv4_validation('255.255.255')
+    assert  @validate.ipv4_validation('255.255.255.255')
   end
 
   def test_invalid_ipv4
