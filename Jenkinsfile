@@ -35,8 +35,8 @@ pipeline {
         stage ('Deployment') {
             steps {
                 script {
-                    sh 'docker build -t rbm .'
-                    sh 'docker run -ti -p 8000:8000 rbm'
+                    sh 'sudo docker build -t rbm .'
+                    sh 'sudo docker run -ti -p 8000:8000 rbm'
                 }
             }
         }
