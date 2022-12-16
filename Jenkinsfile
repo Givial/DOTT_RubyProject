@@ -29,7 +29,6 @@ pipeline {
                 script{
                     sh "gem install minitest"
                     sh "ruby tests.rb"
-                    sh "exit 0"
                 } 
             }
         }
