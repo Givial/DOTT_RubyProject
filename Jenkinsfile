@@ -16,7 +16,8 @@ pipeline {
         stage ('SonarCloud') {
             steps {
                 script {
-                    env.PATH = "${SONAR_SCANNER_HOME}/bin:${PATH}"
+                    env.PATH = "${env.SONAR_SCANNER_HOME}/bin:${env.PATH}"
+                    sh 'echo $PATH'
                     sh 'sonar-scanner --version'
                 }
             }
