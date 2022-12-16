@@ -2,13 +2,13 @@
 class CidrMaskConvert
   def cidr_to_mask(val)
     case val
-    when 1
+    when "1"
       "128.0.0.0"
-    when 16
+    when "16"
       "255.255.0.0"
-    when 21
+    when "21"
       "255.255.248.0"
-    when 32
+    when "32"
       "255.255.255.255"
     else
       "Invalid"
@@ -33,6 +33,7 @@ end
 
 class IpValidate
   def ipv4_validation(val)
-    false
+    ip_regex = /^([01]?\d\d?|2[0-4]\d|25[0-5])\.([01]?\d\d?|2[0-4]\d|25[0-5])\.([01]?\d\d?|2[0-4]\d|25[0-5])\.([01]?\d\d?|2[0-4]\d|25[0-5])$/
+    val =~ ip_regex
   end
 end
