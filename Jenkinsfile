@@ -34,7 +34,13 @@ pipeline {
         }
         stage ('Deployment') {
             steps {
-                echo "Implement Sonarqube Analysis" 
+                script {
+                    dir("${env.WORKSPACE}/AWSLaunchTF") {
+                        sh "terraform init"
+                        sh "terraform plan"
+                        sh "terraform apply --auto-approve"
+                    }
+                }
             }
         }
                
