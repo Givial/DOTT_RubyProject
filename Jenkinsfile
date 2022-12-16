@@ -16,9 +16,10 @@ pipeline {
         stage ('SonarCloud') {
             steps {
                 script {
+                    sh 'whoami'
                     // env.PATH = "${env.SONAR_SCANNER_HOME}/bin:${env.PATH}"
                     // sh 'echo $PATH'
-                    sh 'sudo /home/jenkins/.sonar/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner -Dsonar.organization=givial -Dsonar.projectKey=Givial_DOTT_RubyProject -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io'
+                    // sh 'sudo /home/jenkins/.sonar/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner -Dsonar.organization=givial -Dsonar.projectKey=Givial_DOTT_RubyProject -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io'
                 }
             }
         }
