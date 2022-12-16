@@ -11,28 +11,28 @@ class CidrMaskConvert
     when 32
       "255.255.255.255"
     else
-      "This was hardcoded."
+      "Invalid"
     end
   end
 
   def mask_to_cidr(val)
     case val
     when "128.0.0.0"
-      1
+      "1"
     when "255.255.0.0"
-      16
+      "16"
     when "255.255.248.0"
-      21
+      "21"
     when "255.255.255.255"
-      32
+      "32"
     else
-      "This was hardcoded."
+      "Invalid"
     end
   end
 end
 
 class IpValidate
   def ipv4_validation(val)
-    true
+    false
   end
 end
