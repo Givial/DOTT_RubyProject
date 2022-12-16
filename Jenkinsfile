@@ -17,7 +17,7 @@ pipeline {
                 script {
                     env.PATH = "${env.SONAR_SCANNER_HOME}/bin:${env.PATH}"
                     sh 'echo $PATH'
-                    sh 'sonar-scanner --version'
+                    sh '/home/jenkins/.sonar/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner --version'
                 }
             }
         }
