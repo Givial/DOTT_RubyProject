@@ -35,6 +35,7 @@ class App < Sinatra::Base
       input: value,
       output: convert.mask_to_cidr(value)
     }.to_json
+
   end
 
   get 'ip-validation' do
