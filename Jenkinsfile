@@ -29,17 +29,15 @@ pipeline {
                 script{
                     sh "gem install minitest"
                     sh "ruby tests.rb"
+                    sh "exit 0"
                 } 
             }
         }
         stage ('Deployment') {
             steps {
                 script {
-                    dir("${env.WORKSPACE}/AWSLaunchTF") {
-                        sh "terraform init"
-                        sh "terraform plan"
-                        sh "terraform apply --auto-approve"
-                    }
+                    sh 'docker build -t rbm .'
+                    sh 'docker run -ti -p 8000:8000 rbm'
                 }
             }
         }
